@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<allocations> 
+  <pool name="default">  
+      <schedulingMode>FIFO</schedulingMode>  
+      <weight>1</weight>  
+      <minShare>0</minShare>  
+  </pool>
+  <pool name="spark_batch">
+    <schedulingMode>${spark_batch_scheduler_mode}</schedulingMode>  
+    <weight>1000</weight>
+    <minShare>${spark_batch_minShare}</minShare>
+  </pool>
+  <pool name="test">
+    <schedulingMode>FAIR</schedulingMode>  
+    <weight>1</weight>
+    <minShare>0</minShare>
+  </pool>
+</allocations>
